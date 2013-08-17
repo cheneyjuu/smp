@@ -12,26 +12,42 @@
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-
 <link type="image/x-icon" href="${ctx}/static/images/favicon.ico" rel="shortcut icon">
-<link href="${ctx}/static/bootstrap/2.3.2/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-<link href="${ctx}/static/jquery-validation/1.11.1/validate.css" type="text/css" rel="stylesheet" />
-<link href="${ctx}/static/styles/default.css" type="text/css" rel="stylesheet" />
-<script src="${ctx}/static/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="${ctx}/static/jquery-validation/1.11.1/jquery.validate.min.js" type="text/javascript"></script>
-<script src="${ctx}/static/jquery-validation/1.11.1/messages_bs_zh.js" type="text/javascript"></script>
+    <!--base css styles-->
+    <link rel="stylesheet" href="${ctx}/static/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="${ctx}/static/assets/bootstrap/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="${ctx}/static/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${ctx}/static/assets/normalize/normalize.css">
 
+    <!--flaty css styles-->
+    <link rel="stylesheet" href="${ctx}/static/styles/flaty.css">
+    <link rel="stylesheet" href="${ctx}/static/styles/flaty-responsive.css">
 
 <sitemesh:head/>
 </head>
 
 <body>
-	<div class="container">
-		<%@ include file="/WEB-INF/layouts/header.jsp"%>
-		<div id="content">
-			<sitemesh:body/>
-		</div>
-	</div>
-	<script src="${ctx}/static/bootstrap/2.3.2/js/bootstrap.min.js" type="text/javascript"></script>
+    <%@ include file="/WEB-INF/layouts/header.jsp"%>
+    <div id="content">
+        <sitemesh:body/>
+    </div>
+    <script src="${ctx}/static/assets/modernizr/modernizr-2.6.2.min.js"></script>
+    <!--basic scripts-->
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+    <script>window.jQuery || document.write('<script src="${ctx}/static/assets/jquery/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="${ctx}/static/assets/bootstrap/bootstrap.min.js"></script>
+    <script src="${ctx}/static/assets/nicescroll/jquery.nicescroll.min.js"></script>
+
+    <!--page specific plugin scripts-->
+    <script src="${ctx}/static/assets/flot/jquery.flot.js"></script>
+    <script src="${ctx}/static/assets/flot/jquery.flot.resize.js"></script>
+    <script src="${ctx}/static/assets/flot/jquery.flot.pie.js"></script>
+    <script src="${ctx}/static/assets/flot/jquery.flot.stack.js"></script>
+    <script src="${ctx}/static/assets/flot/jquery.flot.crosshair.js"></script>
+    <script src="${ctx}/static/assets/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="${ctx}/static/assets/sparkline/jquery.sparkline.min.js"></script>
+
+    <!--flaty scripts-->
+    <script src="${ctx}/static/js/flaty.js"></script>
 </body>
 </html>
