@@ -22,3 +22,4 @@ create table tbl_user (
 
 -- 用户名：admin  密码：1
 insert into tbl_user values(1,'admin','admin','49b3e77fbb1e579fc9f18d3d83b864eebba6b746','5820c6d1ab128d2c','2013-07-05 10:04:08');
+insert into tbl_user values(1,'jpm','admin','49b3e77fbb1e579fc9f18d3d83b864eebba6b746','5820c6d1ab128d2c','2013-07-05 10:04:08');
