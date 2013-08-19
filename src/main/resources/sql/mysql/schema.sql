@@ -76,6 +76,7 @@ CREATE TABLE `sys_user` (
 );
 
 CREATE TABLE `employee` (
+  
   `id` int NOT NULL AUTO_INCREMENT,
   `empID` longtext NOT NULL COMMENT '工号',
   `states` int(255) NULL COMMENT '状态：在职、离职、休假',
