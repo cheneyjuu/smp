@@ -64,19 +64,19 @@ DROP TABLE `sys_module`;
 DROP TABLE `sys_user_permission`;
 
 CREATE TABLE `sys_user` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `loginName` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `states` int(255) NOT NULL DEFAULT 0 COMMENT '用户状态。',
   `empID` int NULL COMMENT '关联员工',
   `salt` varchar(64) NULL,
   `roles` varchar(255) NULL,
-  `register_date` timestamp NULL DEFAULT 0000-00-00 00:00:00,
+  `register_date` timestamp NULL,
   PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `employee` (
-  
+
   `id` int NOT NULL AUTO_INCREMENT,
   `empID` longtext NOT NULL COMMENT '工号',
   `states` int(255) NULL COMMENT '状态：在职、离职、休假',
@@ -235,7 +235,7 @@ CREATE TABLE `work_experience` (
 );
 
 CREATE TABLE `sign_in_log` (
-  `id` int NULL,
+  `id` int NULL AUTO_INCREMENT,
   `empID` int NULL,
   `signInTime` datetime NULL,
   PRIMARY KEY (`id`)
